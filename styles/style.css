@@ -28,6 +28,7 @@
     flex-grow : 1;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 .initiative{
     height: 60px;
