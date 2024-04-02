@@ -4,7 +4,10 @@
     padding: 0;
 }
 
-
+body{    background-image: linear-gradient(315deg, #D67D3E,#733C3C);
+    background-image: -webkit-linear-gradient(315deg, #D67D3E,#733C3C);
+    display: flex;
+    background-attachment: scroll;}
 
 
 .container{
@@ -14,7 +17,7 @@
     background-image: linear-gradient(315deg, #D67D3E,#733C3C);
     background-image: -webkit-linear-gradient(315deg, #D67D3E,#733C3C);
     display: flex;
-
+    background-attachment: scroll;
 }
 
 .header{
