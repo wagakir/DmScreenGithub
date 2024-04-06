@@ -4,18 +4,24 @@
     padding: 0;
 }
 
+body{
+    background-image: linear-gradient(315deg, #D67D3E,#733C3C);
+    background-image: -webkit-linear-gradient(315deg, #D67D3E,#733C3C);
+    display: flex;
+    background-attachment: fixed;
+    height: 100vh;
+    }
 
 
-
-.container{
+/*.container{
     position: absolute;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(315deg, #D67D3E,#733C3C);
     background-image: -webkit-linear-gradient(315deg, #D67D3E,#733C3C);
     display: flex;
-
-}
+    background-attachment: scroll;
+}*/
 
 .header{
     height: 100%;
