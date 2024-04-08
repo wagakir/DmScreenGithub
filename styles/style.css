@@ -69,13 +69,13 @@ body{
     justify-content: space-evenly;
 
 }
-.players{
+#playersList{
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
     height: 95%;
     width: 45%;
 }
-.npc{
+#npcList{
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
     height: 95%;

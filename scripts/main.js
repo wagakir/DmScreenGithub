@@ -1,11 +1,10 @@
 let btn= document.getElementById('sortInitiative')
+let playersList= document.getElementById('playersList')
 
 
+function btnclick(){playersList.append(`<p>`)}
 
-function btnclick(){console.log( 'click' )}
 
-
-console.log(btn)
 
 btn.addEventListener('click', btnclick)
 
