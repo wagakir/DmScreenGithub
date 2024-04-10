@@ -1,19 +1,30 @@
 let sortBtn= document.getElementById('sortInitiative')
-let playersList= document.getElementById('playersList')
+let playersDiv= document.getElementById('playersDiv')
 
+let playerIndex = 1
+function appendPlayer() {
 
-function btnclick(){
-    let playerDiv = document.createElement('div')
+    let initiativeInput = document.querySelector('.initiativeInput').value
+    let PlayerHP = document.querySelector('.PlayerHP').value
+    let maxPlayerHP = document.querySelector('.maxPlayerHP').value
+    let playerName = document.querySelector('.playerName').value
+    let playerDiv = document.createElement('div');
     playerDiv.innerHTML = `
-    <p>index №1</p>
-    <p>13</p>
-    <p>20hp</p>
-    <p>имя</p>
-    <button>смэрть</button>`
-    playerDiv.setAttribute()
-    playersList.append(playerDiv)}
+    <p>${playerIndex}</p><p> ${initiativeInput} </p><p>20hp </p><p style="width: 200px">${playerName}</p>
+    <button class="delete">смэрть</button>`;
+    playerDiv.className = 'player'
+
+    playersDiv.append(playerDiv)
+    let DeleteBtn = document.querySelectorAll('.delete')
+    DeleteBtn.forEach(element => {
+        element.onclick = function () {
+            this.parentNode.remove()
+        }
+    });
+    playerIndex +=1
+}
 
 
 
-sortBtn.addEventListener('click', btnclick)
+sortBtn.addEventListener('click', appendPlayer)
 

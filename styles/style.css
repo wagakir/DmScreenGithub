@@ -12,7 +12,15 @@ body{
     height: 100vh;
 
     }
-
+.player{
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid rgba(255,255,255, 0.7) 3px;
+    border-radius: 20px;
+    min-height: 30px;
+}
 
 /*.container{
     position: absolute;
@@ -67,23 +75,53 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
 
 }
-#playersList{
+
+.list{
+    flex-grow : 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px ;
+    height: fit-content;
+    /*border: solid 5px white;*/
+
+}
+.forms{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    /*border: solid 5px white;*/
+}
+#playersDiv{
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
-    height: 95%;
+    height: 100%;
     width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px 0;
+
 }
-#npcList{
+#npcDiv{
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
-    height: 95%;
+    height: 100%;
     width: 45%;
+    padding: 10px 0;
+
 }
-.hint{
-    height: 80px;
-    border: solid rgba(255,255,255, 0.7) 3px;
-    border-radius: 20px;
-    margin: 10px 0;
-}
+    /*.hint{*/
+    /*    height: 80px;*/
+    /*    border: solid rgba(255,255,255, 0.7) 3px;*/
+    /*    border-radius: 20px;*/
+    /*    margin: 10px 0;*/
+    /*}*/
