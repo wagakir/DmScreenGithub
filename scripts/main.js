@@ -1,16 +1,16 @@
 let sortBtn= document.getElementById('sortInitiative')
 let playersDiv= document.getElementById('playersDiv')
-
+let playerAddBtn= document.getElementById('playerAddBtn')
 let playerIndex = 1
 function appendPlayer() {
 
-    let initiativeInput = document.querySelector('.initiativeInput').value
-    let PlayerHP = document.querySelector('.PlayerHP').value
-    let maxPlayerHP = document.querySelector('.maxPlayerHP').value
+    let initiativeInput = document.querySelector('.playerInitiativeInput').value
+    let playerHP = document.querySelector('.playerHP').value
+    let playerMaxHP = document.querySelector('.playerMaxHP').value
     let playerName = document.querySelector('.playerName').value
     let playerDiv = document.createElement('div');
     playerDiv.innerHTML = `
-    <p>${playerIndex}</p><p> ${initiativeInput} </p><p>20hp </p><p style="width: 200px">${playerName}</p>
+    <p> initiative ${initiativeInput} ${playerHP }/${playerMaxHP } hp</p> <p style="width: 200px">${playerName}</p>
     <button class="delete">смэрть</button>`;
     playerDiv.className = 'player'
 
@@ -24,7 +24,7 @@ function appendPlayer() {
     playerIndex +=1
 }
 
+sortBtn.onclick
 
-
-sortBtn.addEventListener('click', appendPlayer)
+playerAddBtn.addEventListener('click', appendPlayer)
 
