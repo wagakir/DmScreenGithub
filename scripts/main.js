@@ -3,14 +3,14 @@ let playersDiv= document.getElementById('playersDiv')
 let playerAddBtn= document.getElementById('playerAddBtn')
 let playerIndex = 1
 function appendPlayer() {
-
+    // ${initiativeInput}
     let initiativeInput = document.querySelector('.playerInitiativeInput').value
-    let playerHP = document.querySelector('.playerHP').value
-    let playerMaxHP = document.querySelector('.playerMaxHP').value
-    let playerName = document.querySelector('.playerName').value
+    let playerHPInput = document.querySelector('.playerHPInput').value
+    let playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
+    let playerNameInput = document.querySelector('.playerNameInput').value
     let playerDiv = document.createElement('div');
     playerDiv.innerHTML = `
-    <p> initiative ${initiativeInput} ${playerHP }/${playerMaxHP } hp</p> <p style="width: 200px">${playerName}</p>
+    <p> Initiative <input class="playerHP" value="1"> HP<input class="playerHP" value="${playerHPInput }">/<input class="playerHP" value="${playerMaxHPInput }" </p> <p style="width: 200px">${playerNameInput}</p>
     <button class="delete">смэрть</button>`;
     playerDiv.className = 'player'
 
