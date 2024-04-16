@@ -8,13 +8,17 @@
 <body>
 
     <div class="header">
-
+        <p>Тема</p>
+        <button class="theme" id="blue" value=" -webkit-linear-gradient(315deg, #738BF9, #383796)"></button>
+        <button class="theme" id="orange" value=" -webkit-linear-gradient(315deg, #D67D3E,#733C3C)"></button>
+        <button class="theme" id="purple" value=" -webkit-linear-gradient(315deg, #F6AB5D, #CB5F81)"></button>
+        <button class="theme" id="dark" value=" -webkit-linear-gradient(315deg, #4E9683, #E1655A)"> </button>
     </div>
     <div class="contents">
-        <div class="initiative">
+        <div id="initiativeList">
 
             <button id="sortInitiative">
-                <img width="45" height="45" src="https://img.icons8.com/ios-filled/50/FFFFFF/runner-starting-the-race.png" alt="runner-starting-the-race"/>
+                <img  width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/runner-starting-the-race.png"  alt="runner-starting-the-race"/>
                 sort
             </button>
 
@@ -43,24 +47,22 @@
                     <label>
                         <input class="playerNameInput"  value="Player Name">
                     </label>
-                    <button id="playerAddBtn">add player</button>
+                    <button id="playerAddBtn">Add</button>
                 </div>
                 <div class="npcForm">
                     <label>
                         <input class="npcInitiativeInput" value="enter initiative">
                     </label>
-                    <p>hp</p>
                     <label>
-                        <input class="npcHP"  value="25">
-                    </label>
-                    <p>max HP</p>
-                    <label>
-                        <input class="npcMaxHP"  value="30">
+                        <input class="npcHPInput"  value="25">
                     </label>
                     <label>
-                        <input class="npcName"  value="Player Name">
+                        <input class="npcMaxHPInput"  value="30">
                     </label>
-                    <button id="npcAddBtn">add NPC</button>
+                    <label>
+                        <input class="npcNameInput"  value="Player Name">
+                    </label>
+                    <button id="npcAddBtn">Add</button>
                 </div>
             </div>
         </div>
