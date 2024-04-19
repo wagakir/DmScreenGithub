@@ -9,6 +9,8 @@
     width: 10px;
     height: 10px;
     background: transparent;
+    border-radius: 5px;
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -16,16 +18,17 @@
     border: solid rgba(255,255,255, 0.7) 2px;
     border-radius: 5px;
 }
-#initiativeList::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
+
+
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
 }
 body{
     background-image: linear-gradient(315deg, #D67D3E,#733C3C);
-    background-image: -webkit-linear-gradient(315deg, #D67D3E,#733C3C);
+    background-image: -webkit-linear-gradient(315deg, #03A88B,#EFBC5E);
     display: flex;
     background-attachment: fixed;
     height: auto;
@@ -63,18 +66,16 @@ body{
     border-radius: 30px;
     margin: 10px;
 }
-#blue{
-    background-image: -webkit-linear-gradient(315deg, #738BF9, #383796);
-}
-#orange{
-    background-image: -webkit-linear-gradient(315deg,  #D67D3E,#9e4d4d);
-}
-#purple{
-    background-image: -webkit-linear-gradient(315deg,  #F6AB5D, #CB5F81);
-}
-#dark{
-    background-image: -webkit-linear-gradient(315deg, #4E9683, #E1655A);
-}
+#theme1{background-image: -webkit-linear-gradient(315deg, #738BF9, #383796);}
+#theme2{background-image: -webkit-linear-gradient(315deg,  #D67D3E,#9e4d4d);}
+#theme3{background-image: -webkit-linear-gradient(315deg,  #F6AB5D, #CB5F81);}
+#theme4{background-image: -webkit-linear-gradient(315deg, #4E9683, #E1655A);}
+#theme5{background-image: -webkit-linear-gradient(315deg, #C8D0E9, #6698A5);}
+#theme6{background-image: -webkit-linear-gradient(315deg, #8FDB97, #926F66);}
+#theme7{background-image: -webkit-linear-gradient(315deg, #827002, #814137);}
+#theme8{background-image: -webkit-linear-gradient(315deg, #8A87B5, #B52BAF);}
+#theme9{background-image: -webkit-linear-gradient(315deg, #BB530D, #1ED5F4);}
+#theme0{background-image:  -webkit-linear-gradient(315deg, #A6F4F8, #28A2DE);}
 .contents{
     height: 100%;
     width: auto;

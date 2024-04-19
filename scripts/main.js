@@ -3,7 +3,6 @@ let playersDiv= document.getElementById('playersDiv')
 let playerAddBtn= document.getElementById('playerAddBtn')
 let index = 0
 let body = document.body
-let npcsDiv= document.getElementById('npcDiv')
 let npcAddBtn= document.getElementById('npcAddBtn')
 // let playersLists = []
 let initiativeList = document.getElementById('initiativeList')
@@ -103,35 +102,7 @@ function appendPlayer(whoAppend) {
     index +=1
 }
 
-function appendNpc() {
-    let npcInitiativeInput = document.querySelector('.npcInitiativeInput').value
-    let npcHPInput = document.querySelector('.npcHPInput').value
-    let npcMaxHPInput = document.querySelector('.npcMaxHPInput').value
-    let npcNameInput = document.querySelector('.npcNameInput').value
-    let npcDiv = document.createElement('div');
-    if (isNaN(npcInitiativeInput)){
-        alert("введите инициативу")
-        return;
-    }
 
-        npcDiv.innerHTML = `
-        <div style="flex-grow: 1; display: flex; flex-direction: column; height: fit-content" >
-        <div>Initiative <input class="npcInitiative" value="${npcInitiativeInput}"> <input class="npcName"   value="${npcNameInput}"></div> 
-        <div><label>HP<input class="npcHP" value="${npcHPInput}">/<input class="npcHP" value="${npcMaxHPInput}"></label> </div></div> 
-    
-        <button class="delete">смэрть</button>`;
-        npcDiv.className = 'npc'
-
-        npcsDiv.append(npcDiv)
-        let DeleteBtn = document.querySelectorAll('.delete')
-        DeleteBtn.forEach(element => {
-            element.onclick = function () {
-                this.parentNode.remove()
-            }
-        });
-        index += 1
-
-}
 
 let themeBtn = document.querySelectorAll('.theme')
 themeBtn.forEach(element => {
