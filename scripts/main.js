@@ -20,10 +20,17 @@ function appendPlayer(whoAppend) {
 
     let playersDiv= document.getElementById(whoAppend)
     // ${initiativeInput}
+
     let playerInitiativeInput =  getRandomInt(20)//document.querySelector('.playerInitiativeInput').value
     let playerHPInput = document.querySelector('.playerHPInput').value
     let playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
     let playerNameInput = document.querySelector('.playerNameInput').value
+    if (whoAppend === 'npcDiv'){
+        playerInitiativeInput =  getRandomInt(20)//document.querySelector('.playerInitiativeInput').value
+        playerHPInput = document.querySelector('.npcHPInput').value
+        playerMaxHPInput = document.querySelector('.npcMaxHPInput').value
+        playerNameInput = document.querySelector('.npcNameInput').value
+    }
     let playerDiv = document.createElement('div');
     if (isNaN(playerInitiativeInput)){
         alert("введите инициативу")
@@ -133,7 +140,7 @@ themeBtn.forEach(element => {
     }
 });
 
-'npcDiv'
+
 
 playerAddBtn.onclick = function (){appendPlayer('playersDiv')}
 // playerAddBtn.addEventListener('click', appendPlayer )
