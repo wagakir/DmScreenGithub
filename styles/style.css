@@ -115,11 +115,11 @@ body{
     flex-grow: 1;
     display: flex;
     overflow: hidden;
-    overflow-x: scroll;
     white-space:nowrap;
     height: 95px;
-    max-width: 100%;
-
+    flex-direction: row-reverse;
+    justify-content: center;
+    overflow-x: scroll;
 }
 .initiativeElement{
     display: inline-block;
@@ -165,15 +165,16 @@ body{
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
     min-height: 400px;
-    height: auto;
+    height: 600px;
     width: 45%;
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     padding: 10px 0;
     min-width: fit-content;
-
+    overflow-y: scroll;
 
 }
 .player,
@@ -185,7 +186,8 @@ body{
     align-items: center;
     border: solid rgba(255,255,255, 0.7) 3px;
     border-radius: 20px;
-    min-height: 30px;
+    min-height: 75px;
+    height: fit-content;
     margin: 5px;
     padding: 0 10px;
 }
@@ -215,14 +217,7 @@ body{
     border-radius: 6px;
     text-align: center;
 }
-#npcDiv{
-    border: solid rgba(255,255,255, 0.7) 3px;
-    border-radius: 20px;
-    height: 100%;
-    width: 45%;
-    padding: 10px 0;
 
-}
 
 .forms{
     height:  fit-content;;
