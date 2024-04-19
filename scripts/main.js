@@ -5,24 +5,18 @@ let index = 1
 let body = document.body
 let npcsDiv= document.getElementById('npcDiv')
 let npcAddBtn= document.getElementById('npcAddBtn')
-let playersLists = []
+
 let initiativeList = document.getElementById('initiativeList')
 function sort(){
 
 
 }
-
-
-
-//to delete later
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-//end del
+// function deletePlayer(indexPlayer){
+//     this.parentNode
+// }
 function appendPlayer() {
-
     // ${initiativeInput}
-    let playerInitiativeInput =  getRandomInt(20)//document.querySelector('.playerInitiativeInput').value
+    let playerInitiativeInput = 1//document.querySelector('.playerInitiativeInput').value
     let playerHPInput = document.querySelector('.playerHPInput').value
     let playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
     let playerNameInput = document.querySelector('.playerNameInput').value
@@ -104,10 +98,7 @@ function appendPlayer() {
         }
     });
 
-    let playerList  = [index, playerInitiativeInput, playerHPInput, playerMaxHPInput, playerNameInput, initiativeDiv.id ]
-    playersLists.push( [ playerList])
-    console.log(playerList)
-    console.log(playersLists)
+
     index +=1
 }
 
@@ -137,7 +128,6 @@ function appendNpc() {
                 this.parentNode.remove()
             }
         });
-
         index += 1
 
 }
