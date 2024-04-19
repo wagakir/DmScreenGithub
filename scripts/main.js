@@ -11,10 +11,12 @@ function sort(){
 
 
 }
-
+// function deletePlayer(indexPlayer){
+//     this.parentNode
+// }
 function appendPlayer() {
     // ${initiativeInput}
-    let playerInitiativeInput = document.querySelector('.playerInitiativeInput').value
+    let playerInitiativeInput = 1//document.querySelector('.playerInitiativeInput').value
     let playerHPInput = document.querySelector('.playerHPInput').value
     let playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
     let playerNameInput = document.querySelector('.playerNameInput').value
@@ -45,15 +47,24 @@ function appendPlayer() {
 
     let players = document.querySelectorAll('.player')
     players.forEach(element => {
-        //console.log(element)
+
         element.childNodes.forEach(cldElement =>{
-           // console.log(cldElement.parentNode)
+
             cldElement.onchange = function () {
                 document.querySelector('#initiativeList').childNodes.forEach(initiativeCldElement =>{
 
-                    //let elementId = String(element.id).slice(6)
-                    let initiativeCldElementId = String(initiativeCldElement.id).slice(19)
-                    console.log(initiativeCldElementId)
+                    let elementId = '#' + String(element.id)
+                    let initiativeCldElementId = '#' + String(initiativeCldElement.id)
+
+                    if(initiativeCldElementId.slice(18) === elementId.slice(7)){
+                        // let list = document.querySelector(`${initiativeCldElementId}   `).childNodes
+                        console.log(element.querySelector('.playerName'))
+
+                        initiativeCldElement.innerHTML = `
+                          <div>Initiative ${element.querySelector('.playerInitiative').value}</div>
+                           <div class="playerNameInitiative" style="width: fit-content">${element.querySelector('.playerName').value}</div>`
+
+                    }
 
 
                     // if (element.id[-1] == initiativeCldElement.id[-1]){
@@ -78,7 +89,11 @@ function appendPlayer() {
     //add delete btn function
     let DeleteBtn = document.querySelectorAll('.delete')
     DeleteBtn.forEach(element => {
+
         element.onclick = function () {
+            console.log()
+            let toDelete = String( '#initiativeElement' + this.parentNode.id.slice(6))
+            document.querySelector(toDelete).remove()
             this.parentNode.remove()
         }
     });
