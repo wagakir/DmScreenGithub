@@ -37,7 +37,7 @@ function appendPlayer(whoAppend) {
     playerDiv.innerHTML = `
     <div style="flex-grow: 1; display: flex; flex-direction: column">
         <div>Initiative <input class="playerInitiative" value="${playerInitiativeInput}"> <input class="playerName"   value="${playerNameInput}"></div> 
-        <div><label>HP<input class="playerHP" value="${playerHPInput }">/<input class="playerHP" value="${playerMaxHPInput }"></label> </div></div> 
+        <div><label>HP<input class="playerHP" value="${playerHPInput }">/<input class="playerHP" value="${playerMaxHPInput }"></label> <input class="playerName" ></div></div> 
     <button class="delete">смэрть</button>`;
 
     playerDiv.className = 'player'
@@ -71,12 +71,18 @@ function appendPlayer(whoAppend) {
                     let elementId = '#' + String(element.id)
                     let initiativeCldElementId = '#' + String(initiativeCldElement.id)
                     if(initiativeCldElementId.slice(18) === elementId.slice(7)){
+                        if (isNaN(element.querySelector('.playerInitiative').value)){
+                            alert('check initiative, is should be a number')
+                            return
+                        }
                         initiativeCldElement.innerHTML = `
                           <div>Initiative ${element.querySelector('.playerInitiative').value}</div>
                            <div class="playerNameInitiative" style="width: fit-content">${element.querySelector('.playerName').value}</div>`
                         elementId.slice(7)[0][1] = element.querySelector('.playerInitiative').value
                         console.log(element.querySelector('.playerInitiative').value)
-                        initiativeCldElement.style.order = element.querySelector('.playerInitiative').value
+                        let initiative = element.querySelector('.playerInitiative').value
+                        initiative = initiative * -1
+                        initiativeCldElement.style.order = initiative
                     }
                 })
 
@@ -96,9 +102,17 @@ function appendPlayer(whoAppend) {
             this.parentNode.remove()
         }
     });
+    initiativeList.childNodes.forEach( element =>{
+
+        element.onclick = function (){
+            this.classList.toggle('border = solid rgba(255,255,255, 0.7) 10px');
+            this.classList.toggle('completed');
+        }
+    });
 
 
-    index +=1
+
+    index += 1
 }
 
 
