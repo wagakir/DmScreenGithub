@@ -8,7 +8,9 @@ let npcAddBtn= document.getElementById('npcAddBtn')
 let initiativeList = document.getElementById('initiativeList')
 
 
-sortBtn.onclick = function () {alert('sosi bibu')}
+sortBtn.onclick = function () {
+
+}
 
 //to delete later
 function getRandomInt(max) {
@@ -19,21 +21,25 @@ function appendPlayer(whoAppend) {
 
     let playersDiv= document.getElementById(whoAppend)
     // ${initiativeInput}
-
-    let playerInitiativeInput =  document.querySelector('.playerInitiativeInput').value
-    let playerHPInput = document.querySelector('.playerHPInput').value
-    let playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
-    let playerNameInput = document.querySelector('.playerNameInput').value
-    if (whoAppend === 'npcDiv'){
+    let playerInitiativeInput = undefined
+    let playerHPInput = undefined
+    let playerMaxHPInput = undefined
+    let playerNameInput = undefined
+    if(whoAppend === 'playersDiv'){
         playerInitiativeInput =  document.querySelector('.playerInitiativeInput').value
+        playerHPInput = document.querySelector('.playerHPInput').value
+        playerMaxHPInput = document.querySelector('.playerMaxHPInput').value
+        playerNameInput = document.querySelector('.playerNameInput').value}
+    if (whoAppend === 'npcDiv'){
+        playerInitiativeInput =  document.querySelector('.npcInitiativeInput').value
         playerHPInput = document.querySelector('.npcHPInput').value
         playerMaxHPInput = document.querySelector('.npcMaxHPInput').value
         playerNameInput = document.querySelector('.npcNameInput').value
     }
     let playerDiv = document.createElement('div');
     if (isNaN(playerInitiativeInput)){
-        alert("введите инициативу")
-        return;
+        playerInitiativeInput = getRandomInt(20)
+
     }
     playerDiv.innerHTML = `
     <div style="flex-grow: 1; display: flex; flex-direction: column">
@@ -80,7 +86,7 @@ function appendPlayer(whoAppend) {
                           <div>Initiative ${element.querySelector('.playerInitiative').value}</div>
                            <div class="playerNameInitiative" style="width: fit-content">${element.querySelector('.playerName').value}</div>`
                         elementId.slice(7)[0][1] = element.querySelector('.playerInitiative').value
-                        console.log(element.querySelector('.playerInitiative').value)
+
                         let initiative = element.querySelector('.playerInitiative').value
                         initiative = initiative * -1
                         initiativeCldElement.style.order = initiative
