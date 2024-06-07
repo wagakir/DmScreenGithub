@@ -32,7 +32,8 @@ function appendPlayer(whoAppend) {
     }
     let playerDiv = document.createElement('div');
     if (isNaN(playerInitiativeInput)){
-        playerInitiativeInput = getRandomInt(20)
+        alert("введите инициативу")
+        return;
     }
     playerDiv.innerHTML = `
     <div style="flex-grow: 1; display: flex; flex-direction: column">
