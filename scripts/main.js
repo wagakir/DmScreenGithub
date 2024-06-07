@@ -14,7 +14,7 @@ sortBtn.onclick = function () {
 
 //to delete later
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    return Math.floor(Math.random() * max) + 1;
 }
 //end del
 function appendPlayer(whoAppend) {
